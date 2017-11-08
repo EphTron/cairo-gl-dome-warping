@@ -2,7 +2,7 @@
 #include "common/timediff.hpp"
 
 #include <cairo.h>
-#include <cairo-gl.h>
+#include <cairo/cairo-gl.h>
 #include <GL/glu.h>
 
 
