@@ -4,6 +4,7 @@
 #include <cairo.h>
 #include <cairo/cairo-gl.h>
 #include <GL/glu.h>
+#include <iostream>
 
 
 // Size of the surface.
@@ -100,9 +101,11 @@ int main(int argc, char** argv) {
 		auto start = std::chrono::system_clock::now();
 
 		if(window.makeCairoCurrent()) {
+			std::cout << "hello" << std::endl;
 			draw(surface);
 
 			cairo_gl_surface_swapbuffers(surface);
+			std::cout << "bye" << std::endl;
 		}
 
 		cairoTime += timediff(start);
